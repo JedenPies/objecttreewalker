@@ -5,6 +5,29 @@
     <groupId>pl.jedenpies.tools</groupId>
     <artifactId>object-tree-walker</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>Object Tree Walker</name>
+    <description>
+        Simple implementation of visitor pattern to traverse over the object graph
+    </description>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Patryk Dobrowolski</name>
+            <email>patryk.dobrowolski@gmail.com</email>
+            <organization>Patryk Dobrowolski</organization>
+            <organizationUrl>https://github.com/JedenPies</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git://github.com/JedenPies/objecttreewalker.git</connection>
+        <developerConnection>scm:git:ssh://github.com:JedenPies/objecttreewalker.git</developerConnection>
+        <url>https://github.com/JedenPies/objecttreewalker/tree/master</url>
+    </scm>
     <build>
         <plugins>
             <plugin>
@@ -14,6 +37,30 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
